@@ -1,0 +1,572 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Modern Personal Portfolio">
+    <title>My Portfolio | Frontend Developer</title>
+    <!-- Google Fonts for Modern Typography -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500&family=Outfit:wght@400;600;800&display=swap"
+        rel="stylesheet">
+    <!-- Font Awesome for Icons (socials, skills) -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <!-- Background Animation Canvas (Interactive Particles) -->
+    <canvas id="bg-canvas"></canvas>
+
+    <!-- Navigation Header -->
+    <nav class="navbar">
+        <a href="#home" class="logo">Portfolio<span>.</span></a>
+        <ul class="nav-links">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#education">Education</a></li>
+            <li><a href="#experience">Experience</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#languages">Languages</a></li>
+            <li><a href="#certifications">Certifications</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+        <!-- Theme Toggle & Hamburger -->
+        <div style="display: flex; align-items: center; gap: 20px;">
+            <button id="theme-btn" class="theme-btn" aria-label="Toggle Theme">
+                <i class="fas fa-sun"></i>
+            </button>
+            <div class="hamburger">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- 1. Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <h2 class="greeting">Hello, I'm</h2>
+            <h1 class="name">Moulish Ghosh</h1>
+            <h3 class="typing-text">I'm <span id="typed">Frontend Developer</span></h3>
+            <p class="hero-desc">I build interactive, modern, and visually stunning web experiences. Let's turn your
+                ideas into reality.</p>
+            <div class="hero-buttons">
+                <a href="#projects" class="btn glass-btn">View My Work</a>
+                <a href="#contact" class="btn secondary-btn">Contact Me</a>
+            </div>
+            <!-- Social Links -->
+            <div class="social-links">
+                <a href="https://github.com/Moulish07"><i class="fab fa-github"></i></a>
+                <a href="https://www.linkedin.com/in/moulish-ghosh-61b49125a/"><i class="fab fa-linkedin"></i></a>
+                <a href="https://www.instagram.com/shimotsuki._yasuie__/"><i class="fab fa-instagram"></i></a>
+                <a href="https://x.com/ghosh_moul24283" target="_blank"><i class="fab fa-twitter"></i></a>
+            </div>
+        </div>
+        <div class="hero-image">
+            <div class="blob-wrapper">
+                <!-- Replace src with your own profile image path later -->
+                <img src="assets/profile2.jpeg" alt="Profile Picture">
+            </div>
+        </div>
+    </section>
+
+    <!-- 2. About Section -->
+    <section id="about" class="about section">
+        <h2 class="section-title">About <span>Me</span></h2>
+        <div class="about-container">
+            <div class="about-text">
+                <h3>Designing the Future of the Web</h3>
+                <p>ECE Student & Developer | Blending technical engineering with digital craft</p>
+                <p>Whether I'm designing circuits, writing code, or behind a camera lens, I'm focused on building things
+                    that are both functional and impactful.</p>
+                <div class="bento-grid mt-4">
+                    <div class="bento-card bento-read">
+                        <i class="fas fa-book-open"></i>
+                        <h4>Currently Reading</h4>
+                        <p>Tom Jones</p>
+                        <p>by Henry Fielding</p>
+                    </div>
+                    <div class="bento-card bento-watch">
+                        <i class="fas fa-film"></i>
+                        <h4>Top Anime</h4>
+                        <p>One Piece</p>
+                    </div>
+                    <div class="bento-card bento-music">
+                        <i class="fab fa-youtube"></i>
+                        <h4>On Repeat</h4>
+                        <p>Violet Evergarden OSTs</p>
+                    </div>
+                </div>
+
+                <div class="about-details">
+                    <div class="detail-item">
+                        <span class="detail-label">Experience:</span>
+                        <span class="detail-value">Fresher</span>
+                    </div>
+                    <div class="detail-item">
+                        <span class="detail-label">Location:</span>
+                        <span class="detail-value">Barddhaman, West Bengal</span>
+                    </div>
+                </div>
+                <!-- Modify the href to point to your actual resume file -> e.g., "assets/resume.pdf" -->
+                <div class="resume-buttons mt-4">
+                    <a href="assets/resume.pdf" download class="btn glass-btn" target="_blank"><i
+                            class="fas fa-download"></i> Download Resume</a>
+                    <button class="btn secondary-btn preview-btn" data-src="assets/resume.pdf"><i
+                            class="fas fa-eye"></i> Quick Preview</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 2.3 Education Section -->
+    <section id="education" class="experience section">
+        <h2 class="section-title">My <span>Education</span></h2>
+        <div class="experience-container">
+
+            <!-- Education Item 1 -->
+            <div class="timeline-item">
+                <div class="timeline-dot"></div>
+                <div class="timeline-content">
+                    <div class="timeline-date">2022 - 2026</div>
+                    <h3>B.Tech in Electronics and Communication Engineering (ECE)</h3>
+                    <h4>MCKV Institute of Engineering</h4>
+                    <div class="timeline-location">
+                        <span class="location-type onsite"><i class="fas fa-university"></i> On-Campus</span>
+                        <span class="location-address"><i class="fas fa-map-marker-alt"></i> Liluah, Howrah, West
+                            Bengal</span>
+                    </div>
+                    <p><b>Current CGPA:</b> 8.64 [Upto 7th Semester]</p>
+                    <br>
+                    <p><b>Core Coursework:</b> Analog & Digital Electronics, Signals & Systems, Control Systems, EI & M,
+                        EIM, Microprocessors, Data Structures & Algorithms.</p>
+                </div>
+            </div>
+
+            <!-- Education Item 2 -->
+            <div class="timeline-item">
+                <div class="timeline-dot"></div>
+                <div class="timeline-content">
+                    <div class="timeline-date">2020 - 2022</div>
+                    <h3>WBCHSE (Higher Secondary) (10+2)</h3>
+                    <h4>Jaugram High School</h4>
+                    <div class="timeline-location">
+                        <span class="location-type onsite"><i class="fas fa-school"></i> High School</span>
+                        <span class="location-address"><i class="fas fa-map-marker-alt"></i> Jaugram, Purba Barddhaman,
+                            West Bengal</span>
+                    </div>
+                    <p><b>Percentage:</b> 90%</p>
+                    <br>
+                    <p><b>Subject:</b> Science stream focused heavily on Physics, Chemistry, Mathematics and Biology
+                        (PCMB).</p>
+                </div>
+            </div>
+
+            <!-- Education Item 3 -->
+            <div class="timeline-item">
+                <div class="timeline-dot"></div>
+                <div class="timeline-content">
+                    <div class="timeline-date">2020</div>
+                    <h3>WBBSE (Secondary) (10)</h3>
+                    <h4>Jaugram High School (H.S.)</h4>
+                    <div class="timeline-location">
+                        <span class="location-type onsite"><i class="fas fa-school"></i> High School</span>
+                        <span class="location-address"><i class="fas fa-map-marker-alt"></i> Jaugram, Purba Barddhaman,
+                            West Bengal</span>
+                    </div>
+                    <p><b>Percentage:</b> 88.85%</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 2.5 Experience & Internships Section -->
+    <section id="experience" class="experience section">
+        <h2 class="section-title">Internships & <span>Experience</span></h2>
+        <div class="experience-container">
+
+
+            <!-- Experience Item 2 -->
+            <div class="timeline-item">
+                <div class="timeline-dot"></div>
+                <div class="timeline-content">
+                    <div class="timeline-date">Oct 2025 - Nov 2025</div>
+                    <h3>Project Internship on Flyback Converter</h3>
+                    <h4>Vikram Sarabhai Space Centre, ISRO</h4>
+                    <div class="timeline-location">
+                        <span class="location-type onsite"><i class="fas fa-building"></i> On-site</span>
+                        <span class="location-address"><i class="fas fa-map-marker-alt"></i> Thiruvanantapuram,
+                            Kerala</span>
+                    </div>
+                    <p><b>EMI/EMC Engineering:</b> Engineered high-reliability EMI filters to meet stringent MIL-STD-461
+                        standards for aerospace-grade Flyback DC/DC converters.</p>
+                    <br>
+                    <p><b>LTSpice Simulation:</b> Performed extensive circuit simulations in LTSpice to analyze
+                        conducted emissions and optimize filter component values for maximum noise attenuation.</p>
+                    <br>
+                    <p><b>Filter Topology:</b> Designed and validated Common Mode and Differential Mode filter
+                        architectures to mitigate high-frequency switching transients while maintaining converter
+                        stability.</p>
+                    <br>
+                    <p><b>Systems Integration:</b> Evaluated thermal and electrical constraints of space-grade hardware,
+                        ensuring design reliability for mission-critical power systems.</p>
+                    <button class="btn secondary-btn timeline-btn mt-4 preview-btn" data-src="assets/vssc.pdf"><i
+                            class="fas fa-certificate"></i> View Certificate</button>
+                </div>
+            </div>
+
+            <!-- Experience Item 3 -->
+            <div class="timeline-item">
+                <div class="timeline-dot"></div>
+                <div class="timeline-content">
+                    <div class="timeline-date">Nov 2025 - Jan 2026</div>
+                    <h3>Python Internship</h3>
+                    <h4>Happieloop Technologies</h4>
+                    <div class="timeline-location">
+                        <span class="location-type remote"><i class="fas fa-wifi"></i> Remote</span>
+                        <span class="location-address"><i class="fas fa-map-marker-alt"></i> Online</span>
+                    </div>
+                    <p><b>Algorithm Development:</b> Solved complex coding challenges and implemented core logic for
+                        internal tools, including custom data structures and automated processing scripts.</p>
+                    <button class="btn secondary-btn timeline-btn mt-4 preview-btn" data-src="assets/happieloop.pdf"><i
+                            class="fas fa-certificate"></i> View Certificate</button>
+                </div>
+            </div>
+
+            <!-- Experience Item 4 -->
+            <div class="timeline-item">
+                <div class="timeline-dot"></div>
+                <div class="timeline-content">
+                    <div class="timeline-date">June 2025 - July 2025</div>
+                    <h3>Short Term Certified Internship Programme</h3>
+                    <h4>Jadavpur University</h4>
+                    <div class="timeline-location">
+                        <span class="location-type onsite"><i class="fas fa-building"></i> On-site</span>
+                        <span class="location-address"><i class="fas fa-map-marker-alt"></i>Jadabpur, Kolkata, West
+                            Bengal</span>
+                    </div>
+                    <p><b>Chip Design Flow:</b> Gained hands-on experience with the full VLSI design cycle, spanning
+                        from architectural layout designing to physical verification.</p>
+                    <br>
+                    <p><b>EDA Tools:</b> Utilized industry-standard EDA tools, including Cadence and Synopsys, for
+                        designing and simulating complex integrated circuits.</p>
+                    <br>
+                    <p><b>Hardware Description:</b> Developed and optimized digital logic modules using Verilog HDL,
+                        focusing on synthesis and timing analysis.</p>
+                    <br>
+                    <p><b>Analog & Digital EDA:</b> Conducted SPICE-based simulations for analog circuit analysis and
+                        explored FPGA architectures for hardware prototyping and implementation..</p>
+                    <button class="btn secondary-btn timeline-btn mt-4 preview-btn" data-src="assets/jadavpur.pdf"><i
+                            class="fas fa-certificate"></i> View Certificate</button>
+                </div>
+            </div>
+
+            <!-- Experience Item 5 -->
+            <div class="timeline-item">
+                <div class="timeline-dot"></div>
+                <div class="timeline-content">
+                    <div class="timeline-date">Feb 2025 - April 2025</div>
+                    <h3>Internship on Full Stack Web Development using Java Spring Boot</h3>
+                    <h4>MCKV Institute of Engineering</h4>
+                    <div class="timeline-location">
+                        <span class="location-type onsite"><i class="fas fa-building"></i> On-site</span>
+                        <span class="location-address"><i class="fas fa-map-marker-alt"></i>Liluah, Howrah, West
+                            Bengal</span>
+                    </div>
+                    <p><b>Backend Architecture:</b> Developed robust server-side applications using Java and the Spring
+                        Boot framework, implementing RESTful APIs and secure data handling.</p>
+                    <br>
+                    <p><b>Frontend Development:</b> Created dynamic and responsive user interfaces using React.js,
+                        HTML5, CSS3, and modern JavaScript (ES6+).</p>
+                    <br>
+                    <p><b>End-to-End Integration:</b> Managed the full development lifecycle, from designing UI/UX
+                        wireframes to connecting frontend components with backend database services.</p>
+                    <br>
+                    <p><b>Full Stack Proficiency:</b> Focused on building scalable web architectures, ensuring seamless
+                        communication between the client-side and server-side ecosystems.</p>
+                    <button class="btn secondary-btn timeline-btn mt-4 preview-btn" data-src="assets/globsyn.pdf"><i
+                            class="fas fa-certificate"></i> View Certificate</button>
+                </div>
+            </div>   
+
+        </div>
+    </section>
+
+    <!-- 3. Skills Section -->
+    <section id="skills" class="skills section">
+        <h2 class="section-title">My <span>Skills</span></h2>
+        <div class="skills-container">
+            <!-- Skill Cards -->
+            <div class="skill-card">
+                <i class="fab fa-html5 skill-icon" style="color: #e34f26;"></i>
+                <h3>HTML5</h3>
+            </div>
+            <div class="skill-card">
+                <i class="fab fa-css3-alt skill-icon" style="color: #1572b6;"></i>
+                <h3>CSS3</h3>
+            </div>
+            <div class="skill-card">
+                <i class="fab fa-js skill-icon" style="color: #f7df1e;"></i>
+                <h3>JAVASCRIPT</h3>
+            </div>
+            <div class="skill-card">
+                <i class="fa-brands fa-python skill-icon" style="color: #3776AB;"></i>
+                <h3>Python</h3>
+            </div>
+            <div class="skill-card">
+                <i class="fas fa-code skill-icon" style="color: #A8B9CC;"></i>
+                <h3>C</h3>
+            </div>
+            <div class="skill-card">
+                <i class="fas fa-bolt skill-icon" style="color: #FF0000;"></i>
+                <h3>LT Spice</h3>
+            </div>
+            <div class="skill-card">
+                <i class="fas fa-microchip skill-icon" style="color: #00FFCC;"></i>
+                <h3>Verilog HDL</h3>
+            </div>
+        </div>
+    </section>
+
+    <!-- 4. Languages Section -->
+    <section id="languages" class="languages section">
+        <h2 class="section-title">Communication <span>Languages</span></h2>
+        <div class="languages-container">
+            <!-- Language 1 -->
+            <div class="language-item">
+                <div class="lang-info">
+                    <h3>Bengali</h3>
+                    <span>Native (100%)</span>
+                </div>
+                <div class="progress-bar">
+                    <div class="progress" style="--target-width: 100%; width: 0;"></div>
+                </div>
+            </div>
+            <!-- Language 2 -->
+            <div class="language-item">
+                <div class="lang-info">
+                    <h3>Hindi</h3>
+                    <span>Proficient Native (95%)</span>
+                </div>
+                <div class="progress-bar">
+                    <div class="progress" style="--target-width: 95%; width: 0;"></div>
+                </div>
+            </div>
+            <!-- Language 3 -->
+            <div class="language-item">
+                <div class="lang-info">
+                    <h3>English</h3>
+                    <span>Fluent (90%)</span>
+                </div>
+                <div class="progress-bar">
+                    <div class="progress" style="--target-width: 90%; width: 0;"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 4.5 Certifications Section -->
+    <section id="certifications" class="experience section">
+        <h2 class="section-title">My <span>Certifications</span></h2>
+        <div class="experience-container">
+
+            <!-- Certification Item 1 -->
+            <div class="timeline-item">
+                <div class="timeline-dot"></div>
+                <div class="timeline-content">
+                    <div class="timeline-date">March 30, 2026</div>
+                    <h3>Deloitte Australia Data Analytics Job Simulation on Forage</h3>
+                    <div class="timeline-location" style="margin-top: 5px; margin-bottom: 15px;">
+                        <span class="location-type remote"><i class="fas fa-wifi"></i> Remote</span>
+                        <span class="location-address"><i class="fas fa-map-marker-alt"></i> Online</span>
+                    </div>
+                    <ul style="list-style-type: disc; margin-left: 20px; color: var(--text-secondary); line-height: 1.6;">
+                        <li style="margin-bottom: 8px;">Completed a Deloitte job simulation involving data analysis and forensic technology</li>
+                        <li style="margin-bottom: 8px;">Created a data dashboard using Tableau</li>
+                        <li>Used Excel to classify data and draw business conclusions</li>
+                    </ul>
+                    <button class="btn secondary-btn timeline-btn mt-4 preview-btn" data-src="assets/deloitte.pdf"><i
+                            class="fas fa-certificate"></i> View Certificate</button>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- 5. Projects Section -->
+    <section id="projects" class="projects section">
+        <h2 class="section-title">Featured <span>Projects</span></h2>
+        <!-- Project Filters -->
+        <div class="project-filters">
+            <button class="filter-btn active" data-filter="all">All</button>
+            <button class="filter-btn" data-filter="frontend">Frontend & App</button>
+            <button class="filter-btn" data-filter="hardware">Hardware</button>
+            <button class="filter-btn" data-filter="ai">AI</button>
+        </div>
+
+        <div class="projects-grid">
+
+            <!-- Project 1 -->
+            <div class="project-card" data-category="frontend">
+                <div class="project-img">
+                    <img src="assets/app_icon.jpg" alt="Project 1">
+                    <div class="project-links">
+                        <a href="assets/BudgetO_v2.apk" target="_blank" title="Live Demo"><i
+                                class="fas fa-external-link-alt"></i></a>
+                        <a href="https://github.com/Moulish07/BudgetO-Expense-Tracker" target="_blank"
+                            title="GitHub Code"><i class="fab fa-github"></i></a>
+                    </div>
+                </div>
+                <div class="project-info">
+                    <h3>BudgetO - Expense Tracker</h3>
+                    <p>Cross-Platform Budgeting Engine: Built a high-performance personal finance app using Flutter and
+                        Dart, implementing Provider for efficient state management and Hive for lightning-fast local
+                        data persistence.</p>
+                    <p>Dynamic Data Architecture: Engineered a sophisticated transaction system featuring real-time
+                        search, categorical sorting, and an automated monthly archiving logic to help users track
+                        long-term spending trends.</p>
+                    <div class="project-tags">
+                        <span>Dart</span>
+                        <span>Flutter</span>
+                        <span>Local Storage</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Project 2 -->
+            <div class="project-card" data-category="hardware">
+                <div class="project-img">
+                    <img src="assets/flyback.jpeg" alt="Project 2">
+                    <div class="project-links">
+                        <a href="#" class="preview-btn" data-src="assets/vssc%20project%20report.pdf"
+                            title="View Report"><i class="fas fa-external-link-alt"></i></a>
+                    </div>
+                </div>
+                <div class="project-info">
+                    <h3>Design of MIL-STD-461 Compliant EMI filters for Flyback DC/DC Converter</h3>
+                    <p>MIL-STD-461 Compliance Engineering: Designed and optimized high-performance EMI filters for a
+                        Flyback DC/DC converter, ensuring strict adherence to CE101 and CE102 conducted emission
+                        standards for military-grade power systems.</p>
+                    <p>Advanced Noise Suppression: Implemented a multi-stage filtering topology using Common-Mode (CM)
+                        chokes and Differential-Mode (DM) filters, significantly reducing high-frequency switching noise
+                        and electromagnetic interference.</pp>
+                    <div class="project-tags">
+                        <span>LT Spice</span>
+                        <span>EMI/EMC</span>
+                        <span>Power Electronics</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Project 3 -->
+            <div class="project-card" data-category="ai">
+                <div class="project-img">
+                    <img src="assets/ai_companion.jpeg" alt="Project 3">
+                    <div class="project-links">
+                        <a href="https://github.com/Moulish07/AI-Companion" target="_blank"><i
+                                class="fab fa-github"></i></a>
+                    </div>
+                </div>
+                <div class="project-info">
+                    <h3>Strawhat AI Companion</h3>
+                    <p><b>Multimodal Interaction & Intelligence:</b> Features a voice-activated interface with custom
+                        wake-word detection, powered by the Gemini 2.5 engine for high-level reasoning and natural
+                        conversation.</p>
+                    <br>
+                    <p><b>Local & Web Automation:</b> Bridges the gap between software and hardware by controlling
+                        desktop applications, managing browser tasks (like YouTube playback), and automating WhatsApp
+                        messaging.</p>
+                    <br>
+                    <p><b>Dynamic Information Retrieval:</b> Utilizes real-time web scraping to provide live updates on
+                        weather, time, and news, bypassing traditional API constraints for a more fluid user experience.
+                    </p>
+                    <div class="project-tags">
+                        <span>Python</span>
+                        <span>Gen AI</span>
+                        <span>Tkinter</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 5. Contact Section -->
+    <section id="contact" class="contact section">
+        <h2 class="section-title">Get In <span>Touch</span></h2>
+        <div class="contact-container">
+            <div class="contact-info">
+                <h3>Let's talk about everything!</h3>
+                <p>Feel free to reach out for collaborations, project inquiries, or just to say hi.</p>
+                <div class="contact-item">
+                    <i class="fas fa-envelope"></i>
+                    <span>moulishghosh909@gmail.com</span>
+                </div>
+                <div class="contact-item">
+                    <i class="fas fa-phone"></i>
+                    <span>+91 9093977003</span>
+                </div>
+                <div class="contact-item">
+                    <i class="fas fa-map-marker-alt"></i>
+                    <span>Barddhaman, West Bengal</span>
+                </div>
+            </div>
+
+            <form class="contact-form" id="contact-form">
+                <div class="input-group">
+                    <input type="text" id="name" name="name" required placeholder="Your Name">
+                </div>
+                <div class="input-group">
+                    <input type="email" id="email" name="email" required placeholder="Your Email">
+                </div>
+                <div class="input-group">
+                    <input type="text" id="subject" name="subject" required placeholder="Subject">
+                </div>
+                <div class="input-group">
+                    <textarea id="message" name="message" rows="5" required placeholder="Your Message"></textarea>
+                </div>
+                <button type="submit" class="btn glass-btn submit-btn">Send Message <i
+                        class="fas fa-paper-plane"></i></button>
+            </form>
+        </div>
+    </section>
+
+    <!-- 6. Footer -->
+    <footer>
+        <div class="footer-content">
+            <p>&copy; 2026 Moulish Ghosh. All rights reserved.</p>
+            <div class="footer-social">
+                <a href="https://github.com/Moulish07" target="_blank"><i class="fab fa-github"></i></a>
+                <a href="https://www.linkedin.com/in/moulish-ghosh-61b49125a/" target="_blank"><i
+                        class="fab fa-linkedin"></i></a>
+                <a href="https://www.instagram.com/shimotsuki._yasuie__/" target="_blank"><i
+                        class="fab fa-instagram"></i></a>
+                <a href="https://x.com/ghosh_moul24283" target="_blank"><i class="fab fa-twitter"></i></a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scroll to Top Button -->
+    <button id="scrollTopBtn" title="Go to top"><i class="fas fa-arrow-up"></i></button>
+
+    <!-- PDF Preview Modal -->
+    <div id="pdf-modal" class="modal">
+        <div class="modal-content">
+            <div class="close-btn"><i class="fas fa-times"></i></div>
+            <div class="modal-body">
+                <iframe id="pdf-viewer" src="" width="100%" height="100%" frameborder="0"></iframe>
+            </div>
+        </div>
+    </div>
+
+    <!-- Custom JavaScript -->
+    <script src="script.js"></script>
+</body>
+
+</html>
